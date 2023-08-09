@@ -1,0 +1,43 @@
+<!-- include header -->
+<%- include('include/_header') %>
+<!-- /include header -->
+
+ <!-- Main Site -->
+ <main id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+            <a href="/add-user" class="border-shadow">
+                <span class="text-gradient">New User <i class="fas fa-user"></i></span>
+            </a>
+        </div>
+
+        <!-- form handling -->
+        <!-- Sends the form-data as an HTTP post transaction -->
+        <!-- The method attribute specifies how to send form-data (the form-data is sent to the page specified in the action attribute). -->
+        <form action="/" method="POST">
+            <table class="table">
+                <thead class="thead-dark">
+                    <!-- tr meaning table row -->
+                    <tr>
+                        <!-- th meaning table head -->
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>@Email</th>
+                        <th>Gender</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <%- include('include/_show') %>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</main>
+<!-- /Main Site -->
+
+
+<!-- include footer -->
+<%- include('include/_footer') %>
+<!-- /include footer -->
